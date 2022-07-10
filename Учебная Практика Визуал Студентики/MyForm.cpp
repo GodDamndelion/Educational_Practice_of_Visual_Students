@@ -1,6 +1,6 @@
 #include "MyForm.h"
 #include <Windows.h>
-using namespace УчебнаяПрактикаВизуалСтудентики;
+using namespace GroupWork;
 
 int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int)
 {
