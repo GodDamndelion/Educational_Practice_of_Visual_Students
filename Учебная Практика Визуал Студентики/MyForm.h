@@ -40,44 +40,16 @@ namespace GroupWork {
 	private: System::Windows::Forms::TextBox^ textBox1;
 	private: System::Windows::Forms::Button^ set_file_name;
 	private: System::Windows::Forms::Button^ del_file_name;
-
-
 	private: System::Windows::Forms::Label^ label4;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 	private: System::Windows::Forms::Button^ dynamic_chain_1;
 	private: System::Windows::Forms::Button^ dynamic_chain_2;
 	private: System::Windows::Forms::Button^ search_tree_1;
 	private: System::Windows::Forms::Button^ search_tree_2;
 	private: System::Windows::Forms::Button^ task;
-
-
-
-
-
-
-
-
-
-
 	private: System::Windows::Forms::TextBox^ textBox8;
 	private: System::Windows::Forms::Label^ label7;
 	private: System::Windows::Forms::Button^ del_num_of_students;
-
 	private: System::Windows::Forms::Button^ set_num_of_students;
-
 	private: System::Windows::Forms::GroupBox^ groupBox1;
 	private: System::Windows::Forms::TextBox^ textBox7;
 	private: System::Windows::Forms::TextBox^ textBox6;
@@ -92,33 +64,10 @@ namespace GroupWork {
 	private: System::Windows::Forms::Label^ label5;
 	private: System::Windows::Forms::TextBox^ textBox2;
 	private: System::Windows::Forms::GroupBox^ groupBox2;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+	private: System::Windows::Forms::Label^ counter_label;
+	private: System::Windows::Forms::Label^ label9;
 
 	protected:
-
-
 
 	protected:
 
@@ -165,6 +114,8 @@ namespace GroupWork {
 			this->label5 = (gcnew System::Windows::Forms::Label());
 			this->textBox2 = (gcnew System::Windows::Forms::TextBox());
 			this->groupBox2 = (gcnew System::Windows::Forms::GroupBox());
+			this->counter_label = (gcnew System::Windows::Forms::Label());
+			this->label9 = (gcnew System::Windows::Forms::Label());
 			this->groupBox1->SuspendLayout();
 			this->groupBox2->SuspendLayout();
 			this->SuspendLayout();
@@ -490,6 +441,8 @@ namespace GroupWork {
 			// groupBox2
 			// 
 			this->groupBox2->BackColor = System::Drawing::SystemColors::Control;
+			this->groupBox2->Controls->Add(this->label9);
+			this->groupBox2->Controls->Add(this->counter_label);
 			this->groupBox2->Controls->Add(this->textBox2);
 			this->groupBox2->Controls->Add(this->label5);
 			this->groupBox2->Controls->Add(this->set_info);
@@ -511,6 +464,30 @@ namespace GroupWork {
 			this->groupBox2->TabIndex = 42;
 			this->groupBox2->TabStop = false;
 			this->groupBox2->Text = L"—тудент:";
+			// 
+			// counter_label
+			// 
+			this->counter_label->AutoSize = true;
+			this->counter_label->BackColor = System::Drawing::SystemColors::ActiveBorder;
+			this->counter_label->Font = (gcnew System::Drawing::Font(L"Times New Roman", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->counter_label->ForeColor = System::Drawing::SystemColors::ControlText;
+			this->counter_label->Location = System::Drawing::Point(589, 19);
+			this->counter_label->Name = L"counter_label";
+			this->counter_label->Size = System::Drawing::Size(93, 19);
+			this->counter_label->TabIndex = 38;
+			this->counter_label->Text = L"                     ";
+			// 
+			// label9
+			// 
+			this->label9->AutoSize = true;
+			this->label9->Font = (gcnew System::Drawing::Font(L"Times New Roman", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->label9->Location = System::Drawing::Point(481, 19);
+			this->label9->Name = L"label9";
+			this->label9->Size = System::Drawing::Size(81, 19);
+			this->label9->TabIndex = 39;
+			this->label9->Text = L"ќсталось:";
 			// 
 			// MyForm
 			// 
@@ -552,5 +529,5 @@ namespace GroupWork {
 	private: System::Void search_tree_1_Click(System::Object^ sender, System::EventArgs^ e); //дерево поиска
 	private: System::Void search_tree_2_Click(System::Object^ sender, System::EventArgs^ e); //авл-дерево поиска
 	private: System::Void task_Click(System::Object^ sender, System::EventArgs^ e); //студентики по заданию
-	};
+};
 }

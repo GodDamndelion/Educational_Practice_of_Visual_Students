@@ -121,14 +121,28 @@
     <ClCompile Include="MyForm.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Dynamic_chain_1.h" />
+    <ClInclude Include="Dynamic_chain_2.h" />
+    <ClInclude Include="List.h" />
     <ClInclude Include="MyForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="OurTask.h" />
+    <ClInclude Include="Our_Functions.h" />
+    <ClInclude Include="SBTree.h" />
+    <ClInclude Include="Search_tree_1.h" />
+    <ClInclude Include="Search_tree_2.h" />
+    <ClInclude Include="STree.h" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Dynamic_chain_1.resx" />
+    <EmbeddedResource Include="Dynamic_chain_2.resx" />
     <EmbeddedResource Include="MyForm.resx">
       <DependentUpon>MyForm.h</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="OurTask.resx" />
+    <EmbeddedResource Include="Search_tree_1.resx" />
+    <EmbeddedResource Include="Search_tree_2.resx" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
