@@ -138,7 +138,7 @@ public:
 	{
 		return Balansed_search_tree::Delete_element(root, elem);
 	}
-	void Balanse();
+	void Balanse(Search_Balansed_Tree<STInfo>& tree);
 	int count_levels(Search_Balansed_Tree<STInfo> tree);
 	void Add(Search_Balansed_Tree<STInfo>& t, STInfo elem);
 };
@@ -177,23 +177,30 @@ void Balansed_search_tree::find_elem(Search_Balansed_Tree<STInfo>& r, Search_Bal
 }
 
 template<class STInfo>
-inline void Search_balansed_binary_tree<STInfo>::Balanse()
+inline void Search_balansed_binary_tree<STInfo>::Balanse(Search_Balansed_Tree<STInfo>& tree)
 {
-	if (count_levels(root->left) > count_levels(root->right) + 1)
+	if (tree->left)
+		Balanse(tree->left);
+	if (tree->right)
+		Balanse(tree->right);
+	if (tree)
 	{
-		Search_Balansed_Tree<STInfo> oldroot = root;
-		root = oldroot->left;
-		oldroot->left = root->right;
-		root->right = oldroot;
-	}
-	else
-		if (count_levels(root->right) > count_levels(root->left) + 1)
+		if (count_levels(tree->left) > count_levels(tree->right) + 1)
 		{
-			Search_Balansed_Tree<STInfo> oldroot = root;
-			root = oldroot->right;
-			oldroot->right = root->left;
-			root->left = oldroot;
+			Search_Balansed_Tree<STInfo> oldroot = tree;
+			tree = oldroot->left;
+			oldroot->left = tree->right;
+			tree->right = oldroot;
 		}
+		else
+			if (count_levels(tree->right) > count_levels(tree->left) + 1)
+			{
+				Search_Balansed_Tree<STInfo> oldroot = tree;
+				tree = oldroot->right;
+				oldroot->right = tree->left;
+				tree->left = oldroot;
+			}
+	}
 }
 
 template<class STInfo>
@@ -221,7 +228,7 @@ inline void Search_balansed_binary_tree<STInfo>::Add(Search_Balansed_Tree<STInfo
 	if (!t)
 	{
 		t = new NODE_SBBT<STInfo>(elem, 1);
-		Balanse();
+		Balanse(root);
 	}
 	else
 		if (elem < t->info)
