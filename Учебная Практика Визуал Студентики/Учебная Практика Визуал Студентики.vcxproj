@@ -121,12 +121,27 @@
     <ClCompile Include="MyForm.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Dynamic_chain_1.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="Dynamic_chain_2.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="List.h" />
     <ClInclude Include="MyForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="OurTask.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="Our_Functions.h" />
     <ClInclude Include="SBTree.h" />
+    <ClInclude Include="Search_tree_1.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="Search_tree_2.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="STree.h" />
   </ItemGroup>
   <ItemGroup>
