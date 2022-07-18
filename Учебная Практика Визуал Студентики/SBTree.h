@@ -228,7 +228,9 @@ inline void Search_balansed_binary_tree<STInfo>::Add(Search_Balansed_Tree<STInfo
 	if (!t)
 	{
 		t = new NODE_SBBT<STInfo>(elem, 1);
-		Balanse(root);
+		if (root)
+			while ((count_levels(root->left) > count_levels(root->right) + 1) || count_levels(root->right) > count_levels(root->left) + 1)
+				Balanse(root);
 	}
 	else
 		if (elem < t->info)
